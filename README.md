@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextShop - Mobile E-Commerce Website
 
-## Getting Started
+[Live Site](https://nextshop-eight-rho.vercel.app/)
 
-First, run the development server:
+NextShop is a simple e-commerce web application built with **Next.js 16 (App Router)**. This project focuses on selling mobile phones online, providing users with product browsing, detailed views, and optional authenticated item management.
+
+---
+
+## **Table of Contents**
+
+- [Project Overview](#project-overview)  
+- [Features](#features)  
+- [Authentication](#authentication)  
+- [Pages / Routes](#pages--routes)  
+- [Technologies Used](#technologies-used)  
+- [Setup & Installation](#setup--installation)  
+- [Login Credentials](#login-credentials)  
+
+---
+
+## **Project Overview**
+
+NextShop is designed as a simple mobile e-commerce platform.  
+- Public pages include landing, item list, and item detail pages.  
+- Optional protected pages allow logged-in users to add new items via a form.  
+- Authentication is implemented using **mock login** with cookies.  
+- The app communicates with an **Express.js API / JSON** to manage product data.  
+
+The landing page contains **7 sections**:
+
+1. Hero Section (banner / tagline)  
+2. Features Section  
+3. About Section  
+4. Services Section  
+5. Testimonials / Reviews Section  
+6. Call-to-Action Section  
+7. Contact / Footer Section  
+
+Additional sections include a **Brands / Partners Section** to highlight trusted mobile brands.
+
+---
+
+## **Features**
+
+- Public landing page with 7+ sections  
+- Responsive **Navbar** with navigation to Login and Items pages  
+- Mock login authentication with cookie-based session  
+- Protected route: Add Item (only for logged-in users)  
+- Item list page fetching data from Express.js server or JSON  
+- Item details page showing full product info  
+- Optional: Toast notifications on product creation  
+- Responsive design using **TailwindCSS**  
+
+---
+
+## **Authentication**
+
+- **Primary**: Mock login with hardcoded credentials  
+- **Optional (Highly Recommended)**: Can integrate **NextAuth.js** for social login  
+- Logged-in users can access the **Add Item** page  
+- Non-authenticated users are redirected to **Login Page**  
+
+---
+
+## **Pages / Routes**
+
+| Route | Description | Auth Required |
+|-------|-------------|---------------|
+| `/` | Landing Page | No |
+| `/items` | Item List Page | No |
+| `/items/[id]` | Item Details Page | No |
+| `/login` | Login Page | No |
+| `/add-items` | Add Item Form | Yes (protected) |
+| `/about` | About Page | No |
+| `/contact` | Contact Page | No |
+| `/signup` | Signup Page (optional) | No |
+
+---
+
+## **Technologies Used**
+
+- **Frontend**: Next.js 16 (App Router), React  
+- **Backend**: Express.js API / JSON for products  
+- **Styling**: TailwindCSS  
+- **Notifications**: SweetAlert2 / react-toastify (optional)  
+- **Authentication**: Cookie-based mock login (optional NextAuth.js for social login)  
+
+---
+
+## **Setup & Installation**
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/your-username/nextshop.git
+cd nextshop
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
