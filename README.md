@@ -92,6 +92,5 @@ Additional sections include a **Brands / Partners Section** to highlight trusted
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/nextshop.git
-cd nextshop
+git clone : https://github.com/arzoo594/NextShop-Repo.git
 
